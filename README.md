@@ -53,7 +53,7 @@ java -cp ./commitLog.jar -Dpropertyfile=commitLog.properties -Dactor=Reader org.
 ## Assumptions
 
 This simulation program achieves multi-threading when Writers are configured and writing to a single 
-commit log file. However, when Readers do not directly interact with commit log file directly. 
+commit log file. However, when Readers do not directly interact with commit log file. 
 In order to efficiently use File operations during read, a single thread reads the contents in a hashmap 
 of Queues. Each commit ID group's log entries are stored in a Queue and accessed from this Hashmap via all the 
 Readers in thread safe manner.
