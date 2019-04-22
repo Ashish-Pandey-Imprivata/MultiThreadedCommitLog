@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.stream.Stream;
 
 public class FileReadHandler extends Thread {
 
@@ -26,6 +27,7 @@ public class FileReadHandler extends Thread {
         }
     }
 
+    private Stream logStream;
     private BufferedReader fCommitLogHandleReader;
     private static FileReadHandler obj;
 
